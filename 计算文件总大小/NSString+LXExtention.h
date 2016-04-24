@@ -1,6 +1,6 @@
 //
 //  NSString+LXExtention.h
-//  百思不得姐
+//  汪汪配
 //
 //  Created by 李lucy on 15/11/17.
 //  Copyright © 2015年 Lucy. All rights reserved.

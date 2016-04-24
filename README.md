@@ -32,4 +32,25 @@ fileSize:计算缓存文件大小
 #UIView的分类
 说明:通过点语法,便于直接访问UIView的frame
 
+#LX_PhotoTool系统相册相关
+
+> 说明:开发中,有时候会用到,访问系统相册又或者调用相机,用户上传照片或者更改用户头像;还有就是保存网络上的图片到本地中,都较常用,因此整理了相关的方法;
+
+`温馨提示:`LX_PhotoTool文件中只是整理了相关的方法,只是为了方便开发,而不是分类或者可以直接导入项目中,<** 不能直接导入项目 **>
+
+iOS中,关于系统相册的有两个,一个是UIImagePickerController,用于访问相册,相机,另一个是<Photos>系统库
+  
+### UIImagePickerController的使用注意:
+
+`注意`:此时需要遵守两个代理:
+
+	* UIImagePickerControllerDelegate
+	* UINavigationControllerDelegate
+
+### Photo库的使用
+
+`注意`:导入相关头文件:
+ 
+	* #import <AVFoundation/AVFoundation.h>
+  	* #import <Photos/Photos.h>
 

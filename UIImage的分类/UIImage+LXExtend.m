@@ -2,7 +2,7 @@
 //  UIImage+LXExtend.m
 //  汪汪配
 //
-//  Created by 李lucy on 16/4/18.
+//  Created by 李lucy on 16/1/18.
 //  Copyright © 2016年 xsteach. All rights reserved.
 //
 
