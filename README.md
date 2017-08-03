@@ -54,3 +54,34 @@ iOS中,关于系统相册的有两个,一个是UIImagePickerController,用于访
 	* #import <AVFoundation/AVFoundation.h>
   	* #import <Photos/Photos.h>
 
+#UIBarButtonItem分类和UIGesture分类
+
+> 说明:系统中的某些类,比如,UIBarButtonItem,初始化的时候,利用的是方法映射,根据方法名--->方法实现,这样做不便于代码维护,以block的形式,是的代码的可读性提高不少;
+
+`温馨提示:` 导入相关头文件
+
+* UIBarButtonItem
+
+    * runtime 添加actionBlock 属性,捕捉用户点击item的事件
+
+```
+
+@property (nonatomic, copy) void (^actionBlock)(id);
+
+
+```
+
+
+* UIGesture 
+
+    * runtime 以block的方式,添加初始换方法,支持添加手势,移除所有手势;
+
+```
+- (instancetype)initWithActionBlock:(void (^)(id sender))block;
+
+- (void)addActionBlock:(void (^)(id sender))block;
+
+- (void)removeAllActionBlocks;
+
+```
+
