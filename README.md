@@ -1,6 +1,38 @@
 # LX_Extend
 开发中常用的分类
 
+
+> 新增 0810 
+
+##RSA加密文件
+
+* 使用方法:
+
+```
+NSString *originalString = @"文档虐我千百遍,我待文档如初恋";
+
+//使用.der和.p12中的公钥私钥加密解密
+NSString *public_key_path = [[NSBundle mainBundle] pathForResource:@"public_key.der" ofType:nil];
+NSString *private_key_path = [[NSBundle mainBundle] pathForResource:@"private_key.p12" ofType:nil];
+
+NSString *encryptStr = [LXRSAEncryptor encryptString:originalString publicKeyWithContentsOfFile:public_key_path];
+NSLog(@"加密前:%@", originalString);
+NSLog(@"加密后:%@", encryptStr);
+NSLog(@"解密后:%@", [LXRSAEncryptor decryptString:encryptStr privateKeyWithContentsOfFile:private_key_path password:nil]);
+
+```
+
+* 打印结果
+
+```
+2017-08-10 08:57:10.553 RAS加密解密[70708:4286249] 加密前:文档虐我千百遍,我待文档如初恋
+2017-08-10 08:57:10.553 RAS加密解密[70708:4286249] 加密后:V+RGKgYa05nQUabdX9DtFZvECgzXSIsHGrUNPuxNrc8N+aFliqaqxbLugBDrBhMNyiTzoeFO39dgvnQJFlpcWGXQNaKlMmP8z/LJ/MUUtZGT/686ks/Vl5AonA9nXAmGaZeMniYRMlMWZB1EnxM9fMUbz+wByrjAT89ok0ydFcU=
+2017-08-10 08:57:15.987 RAS加密解密[70708:4286249] 解密后:文档虐我千百遍,我待文档如初恋
+
+```
+
+
+
 ##单例的使用
 //备注:name为当前的类名
 直接导入'Single.h'头文件,在想设置单例的时候,`.h`文件和`.m`文件分别写入:`interfaceSingle(name)`和`implementationSingle(name)`,使用单例的时候,方法:`[当前类名 share..]`,就可以了,非常简单;
