@@ -4,7 +4,7 @@
 
 > 新增 0810 
 
-##RSA加密文件
+## RSA加密文件
 
 * 使用方法:
 
@@ -33,7 +33,7 @@ NSLog(@"解密后:%@", [LXRSAEncryptor decryptString:encryptStr privateKeyWithCo
 
 
 
-##单例的使用
+## 单例的使用
 //备注:name为当前的类名
 直接导入'Single.h'头文件,在想设置单例的时候,`.h`文件和`.m`文件分别写入:`interfaceSingle(name)`和`implementationSingle(name)`,使用单例的时候,方法:`[当前类名 share..]`,就可以了,非常简单;
 ***
@@ -41,7 +41,7 @@ NSLog(@"解密后:%@", [LXRSAEncryptor decryptString:encryptStr privateKeyWithCo
 ##UIImage和UIImageView的扩展方法
 包括裁剪圆形图片,可拉伸的图片,根据颜色生成图片,保存本地相册,压缩图片到指定大小,图片的模糊处理等
 
-##UIColor的分类
+## UIColor的分类
 主要是十六进制颜色转换,判断色值等
 
 ##[NSString+LXExtention.h]沙盒路径的获取封装及计算缓存文件大小
@@ -56,15 +56,15 @@ fileSize:计算缓存文件大小
 
 ***
 
-##[NSDate和NSCalendar分类]
+## [NSDate和NSCalendar分类]
 判断日期,今天,明天等
 
 ***
 
-#UIView的分类
+# UIView的分类
 说明:通过点语法,便于直接访问UIView的frame
 
-#LX_PhotoTool系统相册相关
+# LX_PhotoTool系统相册相关
 
 > 说明:开发中,有时候会用到,访问系统相册又或者调用相机,用户上传照片或者更改用户头像;还有就是保存网络上的图片到本地中,都较常用,因此整理了相关的方法;
 
