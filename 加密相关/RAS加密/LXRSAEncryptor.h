@@ -44,5 +44,8 @@
  */
 + (NSString *)decryptString:(NSString *)str privateKey:(NSString *)privKey;
 
+//加密算法,请保证密钥长度是8,否则后果自负
++ (NSString *)decode3Des:(NSString *)input key1:(NSString *)key1 key2:(NSString *)key2 key3:(NSString *)key3;
++ (NSString *)encode3Des:(NSString *)input key1:(NSString *)key1 key2:(NSString *)key2 key3:(NSString *)key3;
 
 @end
