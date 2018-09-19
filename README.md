@@ -33,11 +33,21 @@ NSLog(@"解密后:%@", [LXRSAEncryptor decryptString:encryptStr privateKeyWithCo
 
 ```
 
+* 打印结果
+
+```
+2017-08-10 08:57:10.553 RAS加密解密[70708:4286249] 加密前:文档虐我千百遍,我待文档如初恋
+2017-08-10 08:57:10.553 RAS加密解密[70708:4286249] 加密后:V+RGKgYa05nQUabdX9DtFZvECgzXSIsHGrUNPuxNrc8N+aFliqaqxbLugBDrBhMNyiTzoeFO39dgvnQJFlpcWGXQNaKlMmP8z/LJ/MUUtZGT/686ks/Vl5AonA9nXAmGaZeMniYRMlMWZB1EnxM9fMUbz+wByrjAT89ok0ydFcU=
+2017-08-10 08:57:15.987 RAS加密解密[70708:4286249] 解密后:文档虐我千百遍,我待文档如初恋
+
+```
+
 * 3DES加密
 
 需要注意: 
 
 导入头文件;
+
 不支持ARC,需要配置编译参数 -fno-objc-arc 
 
 ```
@@ -48,16 +58,6 @@ DebugLog(@"解密后:%@",[LXRSAEncryptor decode3Des:scrietString key1:@"12345678
 
 加密后:OTPrcX9w4Q8/ZyByaIDvLv65WbfUZC/L
 解密后:哈哈
-
-```
-
-
-* 打印结果
-
-```
-2017-08-10 08:57:10.553 RAS加密解密[70708:4286249] 加密前:文档虐我千百遍,我待文档如初恋
-2017-08-10 08:57:10.553 RAS加密解密[70708:4286249] 加密后:V+RGKgYa05nQUabdX9DtFZvECgzXSIsHGrUNPuxNrc8N+aFliqaqxbLugBDrBhMNyiTzoeFO39dgvnQJFlpcWGXQNaKlMmP8z/LJ/MUUtZGT/686ks/Vl5AonA9nXAmGaZeMniYRMlMWZB1EnxM9fMUbz+wByrjAT89ok0ydFcU=
-2017-08-10 08:57:15.987 RAS加密解密[70708:4286249] 解密后:文档虐我千百遍,我待文档如初恋
 
 ```
 
