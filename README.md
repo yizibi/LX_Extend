@@ -17,6 +17,8 @@
 
 * 使用方法:
 
+* RSA加密
+
 ```
 NSString *originalString = @"文档虐我千百遍,我待文档如初恋";
 
@@ -30,6 +32,25 @@ NSLog(@"加密后:%@", encryptStr);
 NSLog(@"解密后:%@", [LXRSAEncryptor decryptString:encryptStr privateKeyWithContentsOfFile:private_key_path password:nil]);
 
 ```
+
+* 3DES加密
+
+需要注意: 
+
+导入头文件;
+不支持ARC,需要配置编译参数 -fno-objc-arc 
+
+```
+
+NSString *scrietString = [LXRSAEncryptor encode3Des:@"哈哈" key1:@"12345678" key2:@"12345678" key3:@"12345678"];
+DebugLog(@"加密后:%@",scrietString);
+DebugLog(@"解密后:%@",[LXRSAEncryptor decode3Des:scrietString key1:@"12345678" key2:@"12345678" key3:@"12345678"]);
+
+加密后:OTPrcX9w4Q8/ZyByaIDvLv65WbfUZC/L
+解密后:哈哈
+
+```
+
 
 * 打印结果
 
