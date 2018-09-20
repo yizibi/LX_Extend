@@ -50,5 +50,15 @@
 
 /**  生成一张等比例的压缩图 */
 + (UIImage *)imageCompressForSize:(UIImage *)sourceImage targetSize:(CGSize)size;
+/**
+ 给图片在指定图片位置,添加一个标记
+ 
+ @param image 原来的图片
+ @param signColor 标记颜色
+ @param positionX 相对原图x值
+ @param positionY 相对原图y值
+ @return 图片在指定图片位置,添加一个标记
+ */
++ (UIImage *)imageWithOriginalName:(UIImage *)image signColor:(UIColor *)signColor signPositionX:(CGFloat)positionX ignPositionY:(CGFloat)positionY;
 
 @end

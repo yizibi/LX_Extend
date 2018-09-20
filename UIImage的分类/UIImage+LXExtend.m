@@ -64,6 +64,29 @@
     return [image stretchableImageWithLeftCapWidth:image.size.width * left topCapHeight:image.size.height * top];
 }
 
+// 给图片添加标记
++ (UIImage *)imageWithOriginalName:(UIImage *)image signColor:(UIColor *)signColor signPositionX:(double)positionX ignPositionY:(double)positionY {
+    
+    //1.获取图片
+    UIImage *signalImage = [[UIImage imageWithColor:signColor] circleImag];
+    //2.开启上下文
+    UIGraphicsBeginImageContextWithOptions(image.size, NO, 0);
+    //3.绘制背景图片
+    [image drawInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
+    //绘制标记图片到当前上下文
+    CGFloat signX = positionX * image.size.width;
+    CGFloat signY = (1 - positionY)* image.size.height;
+    
+    CGRect rect = CGRectMake(signX, signY, 40, 40);
+    [signalImage drawInRect:rect];
+    //4.从上下文中获取新图片
+    UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
+    //5.关闭图形上下文
+    UIGraphicsEndImageContext();
+    //返回图片
+    return newImage;
+}
+
 /**
  *  根据指定的颜色生成图片
  */
