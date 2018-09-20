@@ -8,41 +8,28 @@
 
 ## 目录结构如下
 
-LX_Extend 
+```
+.
+├── Category
+│   ├── Map格式化
+│   ├── UIBarButtonItem
+│   ├── UIColor
+│   ├── UIGesture
+│   ├── UIImage
+│   ├── UIViewFrame
+│   ├── 日期判断
+│   └── 计算文件总大小(NSString)
+├── Macros
+│   └── Single.h
+├── README.md
+└── Utils
+├── DateManger
+├── RSA+3DES
+├── crashLib
+├── 系统相册访问
+└── ConsoleCheseInput
 
-|
-
-|__Category
-
-|           |_UIColor
-
-|           |_UIImage
-
-|           |_UIView
-
-|           |_NSString
-
-|           |_UIGesture
-
-|
-
-|__Utils
-
-|       |_DateManger
-
-|       |_ChineseInput
-
-|       |_CrashLib
-
-|
-
-|__Macros
-
-      |_Single
-      
-|
-  
-  
+```
 
 > 新增 0920
 
