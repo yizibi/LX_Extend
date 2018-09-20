@@ -3,6 +3,17 @@
 
 ![caterogy](http://o9zpq25pv.bkt.clouddn.com/lucyBlog/category1.png)
 
+
+> 新增 0920
+
+* 字典 内部 key -> value 统一处理, 如果为nil,转换 @"",或者@"未知信息",可以自定义
+
+## UIImage 
+
+* ✅根据颜色生成图片;
+* ✅图片水印;
+* ✅圆形图片裁剪
+
 > 新增 0816
 
 ## 数组越界,字符串截取越界,崩溃AOP插件
