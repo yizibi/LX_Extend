@@ -1,12 +1,59 @@
 # LX_Extend
-开发中常用的分类
+开发中常用的工具分类
 
 ![caterogy](http://o9zpq25pv.bkt.clouddn.com/lucyBlog/category1.png)
 
 
+> 综述如下
+
+## 目录结构如下
+
+LX_Extend 
+|
+|__Category
+|           |_UIColor
+|           |_UIImage
+|           |_UIView
+|           |_NSString
+|           |_UIGesture
+|
+|__Utils
+|       |_DateManger
+|       |_ChineseInput
+|       |_CrashLib
+|
+|__Macros
+            |_Single
+  
+  
+
 > 新增 0920
 
 * 字典 内部 key -> value 统一处理, 如果为nil,转换 @"",或者@"未知信息",可以自定义
+
+## 日期管理
+
+* 将时间戳转化为自定义的格式
+
+举个🌰:  时间戳:2345234523
+
+* Usage
+
+
+```
+#define aDF @"yyyy-MM-dd HH:mm:ss"
+#define bDF @"yyyyMMddHHmmss"
+#define cDF @"yyyy-MM-dd"
+#define dDF @"yyyyMMdd"
+#define eDF @"MM-dd HH:mm"
+#define fDF @"HH:mm"
+#define gDF @"yyyy/MM/dd HH:mm"
+
+```
+
+- (NSString *)stringWithTimeInterval:(NSTimeInterval)interval dateFormat:(NSString *)dateFormat;
+
+
 
 ## UIImage 
 
