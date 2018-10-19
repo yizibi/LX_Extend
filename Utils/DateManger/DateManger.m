@@ -37,7 +37,18 @@ implementationSingle(DateManger);
     
     return dateFormatter;
 }
-
+//获取当前时间之前或者之后的某个月
+- (NSString *)getMonthWithDateFormat:(NSString *)dateFormat monthCount:(NSInteger)monthCount {
+    NSDate *currentDate = [NSDate date];
+    NSDateFormatter *formatter = [self dateFormatterOfDateFormat:dateFormat];
+    
+    NSCalendar *calendar = [NSCalendar calendar];
+    NSDateComponents *lastMonthComps = [[NSDateComponents alloc] init];
+    //    [lastMonthComps setYear:1]; // year = 1表示1年后的时间 year = -1为1年前的日期，month day 类推
+    [lastMonthComps setMonth:monthCount];
+    NSDate *newdate = [calendar dateByAddingComponents:lastMonthComps toDate:currentDate options:0];
+    return [formatter stringFromDate:newdate];
+}
 
 #pragma mark -
 - (NSString *)stringWithDate:(NSDate *)date dateFormat:(NSString *)dateFormat

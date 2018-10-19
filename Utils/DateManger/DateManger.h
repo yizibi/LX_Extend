@@ -16,6 +16,8 @@
 #define eDF @"MM-dd HH:mm"
 #define fDF @"HH:mm"
 #define gDF @"yyyy/MM/dd HH:mm"
+#define hDF @"yyyy年MM月"
+#define jDF @"yyyy-MM"
 
 
 
@@ -68,7 +70,14 @@ interfaceSingle(DateManger);
 
 - (NSString *)timestampWithDateStr:(NSString *)dateStr dateFormat:(NSString *)dateFormat;
 
-
+/**
+ 返回距离当前的年月
+ 
+ @param dateFormat 时间格式
+ @param monthCount 未来月份+1 之前的月份 -1
+ @return 秒数
+ */
+- (NSString *)getMonthWithDateFormat:(NSString *)dateFormat monthCount:(NSInteger)monthCount;
 
 /**
  当前时间戳
