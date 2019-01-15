@@ -36,7 +36,8 @@
 + (void)saveImageToAlbum:(UIImage *)image;
 
 + (void)saveImageToAlbumWithUrlStr:(NSString *)urlStr;
-
+//虚线图片
++ (instancetype)imageWithSize:(CGSize)size borderColor:(UIColor* )color borderWidth:(CGFloat)borderWidth;
 /**  旋转图片 */
 - (UIImage *)imageRotatedByDegrees:(CGFloat)degrees;
 
