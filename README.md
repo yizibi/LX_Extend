@@ -19,6 +19,7 @@
 │   ├── UIViewFrame
 │   ├── 日期判断
 │   └── 计算文件总大小(NSString)
+│   └── SocketManger
 ├── Macros
 │   └── Single.h
 ├── README.md
@@ -30,6 +31,14 @@
 └── ConsoleCheseInput
 
 ```
+
+> 190515 增加 MQTTManger
+
+项目需要依赖以下两个库:
+ * pod 'MQTTClient'
+* pod 'MQTTClient/Websocket'
+
+封装了,开启连接,订阅主题,取消订阅,关闭连接,内部封装了,失败重连
 
 > 新增 0920
 
