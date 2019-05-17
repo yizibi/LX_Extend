@@ -1,7 +1,7 @@
 # LX_Extend
 开发中常用的工具分类
 
-![caterogy](http://o9zpq25pv.bkt.clouddn.com/lucyBlog/category1.png)
+![caterogy](http://yizhibi.6chemical.com/lucyBlog/category1.png)
 
 
 > 综述如下
