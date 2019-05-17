@@ -24,11 +24,12 @@
 │   └── Single.h
 ├── README.md
 └── Utils
-├── DateManger
-├── RSA+3DES
-├── crashLib
-├── 系统相册访问
-└── ConsoleCheseInput
+│   └── DateManger
+│   └── RSA+3DES
+│   └── rashLib
+│   └── 系统相册访问
+│   └── ConsoleCheseInput
+│   └── SocketManger
 
 ```
 
@@ -36,9 +37,14 @@
 
 项目需要依赖以下两个库:
  * pod 'MQTTClient'
-* pod 'MQTTClient/Websocket'
+ * pod 'MQTTClient/Websocket'
 
-封装了,开启连接,订阅主题,取消订阅,关闭连接,内部封装了,失败重连
+封装了如下功能
+* 开启连接;
+* 订阅主题;
+* 取消订阅;
+* 关闭连接;
+* 失败重连;
 
 > 新增 0920
 
